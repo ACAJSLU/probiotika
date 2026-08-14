@@ -11,18 +11,18 @@
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #f4f8f5; /* Fundo suave */
-            color: #2c3e50; /* Cor do texto */
+            background-color: #f4f8f5;
+            color: #2c3e50;
         }
 
-        /* Estilo da Marca / Cabeçalho */
+        /* Estilo da Marca */
         .marca {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         .marca h1 {
-            color: #1b5e20; /* Verde escuro */
+            color: #1b5e20;
             font-size: 3em;
             margin: 0;
             letter-spacing: 1px;
@@ -30,16 +30,40 @@
         }
 
         .marca p {
-            color: #4caf50; /* Verde intermediário */
+            color: #4caf50;
             font-size: 1.2em;
             font-weight: 600;
             margin-top: 5px;
         }
 
-        /* Estilo dos Títulos das Seções */
+        /* Menu de Navegação */
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #1b5e20;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .menu a:hover, .menu a.ativo {
+            background-color: #4caf50;
+        }
+
+        /* Títulos e Parágrafos */
         h2 {
             color: #2e7d32;
-            border-bottom: 2px solid #a5d6a7; /* Linha verde abaixo do título */
+            border-bottom: 2px solid #a5d6a7;
             padding-bottom: 5px;
             margin-top: 30px;
         }
@@ -52,13 +76,17 @@
 </head>
 <body>
 
-    <!-- Topo / Cabeçalho da Marca -->
     <header class="marca">
         <h1>PROBIÓTIKA</h1>
         <p>O Pilar da Saúde Preventiva</p>
     </header>
+
+    <!-- Menu de Navegação do Site -->
+    <nav class="menu">
+        <a href="index.html" class="ativo">Início</a>
+        <a href="microbioma.html">Microbioma</a>
+    </nav>
     
-    <!-- Conteúdo da Página -->
     <h2>Sobre</h2>
     <p>Probióticos são microrganismos vivos destinados a apoiar ou melhorar a saúde e o bem-estar do organismo. São comumente usados tanto em humanos quanto em animais. Embora o termo se refira aos próprios microrganismos, Probióticos podem ser consumidos por uma variedade de produtos, incluindo o iogurte, queijo, certos alimentos fermentados, além de cápsulas contendo uma única cepa ou uma mistura definida de cepas.</p>
     <p>O mercado de Probióticos une biotecnologia avançada, saúde preventiva e tendências fortíssimas de consumo.</p>
