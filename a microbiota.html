@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>A Microbiota - Probiótika</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f4f8f5;
+            color: #2c3e50;
+        }
+
+        /* Estilo da Marca */
+        .marca {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .marca h1 {
+            color: #1b5e20;
+            font-size: 3em;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .marca p {
+            color: #4caf50;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        /* Menu de Navegação */
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #1b5e20;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .menu-item {
+            position: relative;
+        }
+
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 4px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .menu a:hover, .menu a.ativo {
+            background-color: #4caf50;
+        }
+
+        /* Nível 2: Submenu Dropdown */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1b5e20;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            padding: 8px 0;
+            z-index: 100;
+        }
+
+        .submenu-item {
+            position: relative;
+        }
+
+        .submenu a {
+            padding: 8px 16px;
+            color: #ffffff;
+            font-weight: normal;
+            font-size: 0.95em;
+            border-radius: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .submenu a:hover {
+            background-color: #2e7d32;
+        }
+
+        .menu-item:hover > .submenu {
+            display: block;
+        }
+
+        /* Nível 3: Sub-submenu (Cascata Lateral) */
+        .sub-submenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #2e7d32;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            padding: 8px 0;
+            z-index: 101;
+        }
+
+        .sub-submenu a {
+            padding: 8px 16px;
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+
+        .sub-submenu a:hover {
+            background-color: #4caf50;
+        }
+
+        .submenu-item:hover > .sub-submenu {
+            display: block;
+        }
+
+        /* Indicador visual para itens com sub-submenu */
+        .has-children::after {
+            content: "▸";
+            margin-left: 10px;
+            font-size: 0.8em;
+        }
+
+        /* Títulos, Subtítulos e Parágrafos */
+        h2 {
+            color: #2e7d32;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #1b5e20;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        ul {
+            font-size: 1.05em;
+            line-height: 1.8;
+            margin-left: 20px;
+        }
+
+        .destaque {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Estilo do Rodapé */
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #a5d6a7;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555555;
+        }
+
+        footer p {
+            text-align: center;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="marca">
+        <h1>PROBIÓTIKA</h1>
+        <p>O Pilar da Saúde Preventiva</p>
+    </header>
+
+    <!-- Menu de Navegação do Site com 3 Níveis -->
+    <nav class="menu">
+        <div class="menu-item">
+            <a href="index.html">Início</a>
+        </div>
+
+        <!-- MENU MICROBIOMA -->
+        <div class="menu-item">
+            <a href="a microbiota.html" class="ativo">Microbioma</a>
+            <div class="submenu">
+                <div class="submenu-item">
+                    <a href="a microbiota.html" class="has-children">A Microbiota</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Conceitos Básicos</a>
+                        <a href="#####">Microbiota vs Microbioma</a>
+                        <a href="#####">Diversidade Genética</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Eixo Intestino-Cérebro</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Neurotransmissores</a>
+                        <a href="#####">Saúde Mental e Vago</a>
+                        <a href="#####">Psicobióticos</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Cepas e Benefícios</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Lactobacillus</a>
+                        <a href="#####">Bifidobacterium</a>
+                        <a href="#####">Saccharomyces</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENU SENOLÍTICA -->
+        <div class="menu-item">
+            <a href="#####">Senolítica</a>
+            <div class="submenu">
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Células Zumbi</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Senescência Celular</a>
+                        <a href="#####">O Fenótipo SASP</a>
+                        <a href="#####">Impacto nos Tecidos</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Senolíticos Naturais</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Fisetina</a>
+                        <a href="#####">Quercetina</a>
+                        <a href="#####">Fontes Alimentares</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Gerociência e IA</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Triagem de Moléculas</a>
+                        <a href="#####">Estudos Clínicos</a>
+                        <a href="#####">Futuro da Medicina</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENU PREVENÇÃO -->
+        <div class="menu-item">
+            <a href="#####">Prevenção</a>
+            <div class="submenu">
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Nutrição Funcional</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Prebióticos</a>
+                        <a href="#####">Simbióticos</a>
+                        <a href="#####">Polifenóis</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Hábitos de Longevidade</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Jejum e Autofagia</a>
+                        <a href="#####">Gestão do Sono</a>
+                        <a href="#####">Exercício e Mitocôndrias</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Artigos e Estudos</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Publicações Recentes</a>
+                        <a href="#####">Revisões Científicas</a>
+                        <a href="#####">Guia de Leitura</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <h2>A Microbiota</h2>
+    
+    <div class="destaque">
+        <p style="margin: 0; font-size: 1.1em;">
+            <strong>Biota é vida!</strong> A Microbiota é a variedade de microrganismos, que podem ser comensais, mutualistas ou patogênicos encontrados em e em todos os organismos multicelulares, incluindo plantas. Ela inclui seus tipos: bactérias, arqueias, fungos, protistas e vírus.
+        </p>
+    </div>
+
+    <h2>Relações Ecológicas e o Organismo Hospedeiro</h2>
+    <p>Os microrganismos que compõem a microbiota interagem com o organismo hospedeiro através de diferentes relações biológicas:</p>
+    <ul>
+        <li><strong>Comensais:</strong> Vivem no organismo sem causar danos ou benefícios diretos perceptíveis, habitando em equilíbrio.</li>
+        <li><strong>Mutualistas:</strong> Estabelecem uma relação de cooperação mútua onde tanto o hospedeiro quanto o microrganismo se beneficiam (como a produção de vitaminas e auxílio na digestão).</li>
+        <li><strong>Patogênicos:</strong> Podem desencadear processos infecciosos ou inflamatórios quando o equilíbrio biológico é quebrado (disbiose).</li>
+    </ul>
+
+    <h2>A Diversidade dos Microrganismos</h2>
+    <p>A riqueza de uma microbiota saudável está diretamente ligada à coexistência harmoniosa dos seus diferentes tipos constitutivos:</p>
+    <ul>
+        <li><strong>Bactérias:</strong> O grupo mais abundante e estudado, essencial para a digestão e modulação imune.</li>
+        <li><strong>Arqueias:</strong> Organismos unicelulares vitais para a regulação de gases metabólicos no trato digestivo.</li>
+        <li><strong>Fungos (Mobiota/Micobioma):</strong> Importantes para a integridade da barreira intestinal e homeostase imunológica.</li>
+        <li><strong>Protistas e Vírus (Virobioma):</strong> Atuam no controle populacional de bactérias e na modulação genética do ecossistema.</li>
+    </ul>
+
+    <h2>Microbiota e Nutrição Preventiva</h2>
+    <p>Compreender a amplitude da microbiota em organismos multicelulares nos permite utilizar intervenções nutricionais — como o uso estratégico de prebióticos e probióticos — para cultivar populações mutualistas e promover a longevidade celular preventiva.</p>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Probiótika - Todos os direitos reservados.</p>
+        <p>Conteúdo e estrutura confeccionados com o auxílio de Inteligência Artificial.</p>
+    </footer>
+
+</body>
+</html>
