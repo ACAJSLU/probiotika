@@ -34,6 +34,7 @@
             font-size: 1.2em;
             font-weight: 600;
             margin-top: 5px;
+            text-align: center;
         }
 
         /* Menu de Navegação */
@@ -45,6 +46,11 @@
             padding: 12px;
             border-radius: 8px;
             margin-bottom: 30px;
+            position: relative;
+        }
+
+        .menu-item {
+            position: relative;
         }
 
         .menu a {
@@ -53,11 +59,84 @@
             font-weight: 600;
             padding: 6px 16px;
             border-radius: 4px;
+            display: block;
             transition: background 0.3s;
         }
 
         .menu a:hover, .menu a.ativo {
             background-color: #4caf50;
+        }
+
+        /* Nível 2: Submenu Dropdown */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1b5e20;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            padding: 8px 0;
+            z-index: 100;
+        }
+
+        .submenu-item {
+            position: relative;
+        }
+
+        .submenu a {
+            padding: 8px 16px;
+            color: #ffffff;
+            font-weight: normal;
+            font-size: 0.95em;
+            border-radius: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .submenu a:hover {
+            background-color: #2e7d32;
+        }
+
+        .menu-item:hover > .submenu {
+            display: block;
+        }
+
+        /* Nível 3: Sub-submenu (Cascata Lateral) */
+        .sub-submenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: #2e7d32;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            padding: 8px 0;
+            z-index: 101;
+        }
+
+        .sub-submenu a {
+            padding: 8px 16px;
+            color: #ffffff;
+            font-size: 0.9em;
+        }
+
+        .sub-submenu a:hover {
+            background-color: #4caf50;
+        }
+
+        .submenu-item:hover > .sub-submenu {
+            display: block;
+        }
+
+        /* Indicador visual para itens com sub-submenu */
+        .has-children::after {
+            content: "▸";
+            margin-left: 10px;
+            font-size: 0.8em;
         }
 
         /* Títulos e Parágrafos */
@@ -81,12 +160,104 @@
         <p>O Pilar da Saúde Preventiva</p>
     </header>
 
-    <!-- Menu de Navegação do Site -->
+    <!-- Menu de Navegação do Site com 3 Níveis -->
     <nav class="menu">
-        <a href="index.html" class="ativo">Início</a>
-        <a href="#####">Microbioma</a>
-        <a href="#####">Senolítica</a>
-        <a href="#####">Prevenção</a>
+        <div class="menu-item">
+            <a href="index.html" class="ativo">Início</a>
+        </div>
+
+        <!-- MENU MICROBIOMA -->
+        <div class="menu-item">
+            <a href="#####">Microbioma</a>
+            <div class="submenu">
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">O que é Microbioma?</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Conceitos Básicos</a>
+                        <a href="#####">Microbiota vs Microbioma</a>
+                        <a href="#####">Diversidade Genética</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Eixo Intestino-Cérebro</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Neurotransmissores</a>
+                        <a href="#####">Saúde Mental e Vago</a>
+                        <a href="#####">Psicobióticos</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Cepas e Benefícios</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Lactobacillus</a>
+                        <a href="#####">Bifidobacterium</a>
+                        <a href="#####">Saccharomyces</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENU SENOLÍTICA -->
+        <div class="menu-item">
+            <a href="#####">Senolítica</a>
+            <div class="submenu">
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Células Zumbi</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Senescência Celular</a>
+                        <a href="#####">O Fenótipo SASP</a>
+                        <a href="#####">Impacto nos Tecidos</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Senolíticos Naturais</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Fisetina</a>
+                        <a href="#####">Quercetina</a>
+                        <a href="#####">Fontes Alimentares</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Gerociência e IA</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Triagem de Moléculas</a>
+                        <a href="#####">Estudos Clínicos</a>
+                        <a href="#####">Futuro da Medicina</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENU PREVENÇÃO -->
+        <div class="menu-item">
+            <a href="#####">Prevenção</a>
+            <div class="submenu">
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Nutrição Funcional</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Prebióticos</a>
+                        <a href="#####">Simbióticos</a>
+                        <a href="#####">Polifenóis</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Hábitos de Longevidade</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Jejum e Autofagia</a>
+                        <a href="#####">Gestão do Sono</a>
+                        <a href="#####">Exercício e Mitocôndrias</a>
+                    </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="#####" class="has-children">Artigos e Estudos</a>
+                    <div class="sub-submenu">
+                        <a href="#####">Publicações Recentes</a>
+                        <a href="#####">Revisões Científicas</a>
+                        <a href="#####">Guia de Leitura</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
     
     <h2>Sobre</h2>
